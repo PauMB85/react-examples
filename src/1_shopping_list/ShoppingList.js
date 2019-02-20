@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 
 
 /**
- * contruccion de una lista mediante JSX
- * Que es JSX - es una extensión de JS y HMTL con lo que facilita escribir
- * código más limpio
- * Se utiliza el método React.createElement(tag,propiedades, contenido tag)
+ * ShoppingList es un componente con un parámetro (name) con un método 'render'
+ * que devuelve una descripción de lo que se quiere visualizar en la pantalla.
  */
 
 class ShoppingList extends Component {
