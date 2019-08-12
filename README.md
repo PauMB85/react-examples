@@ -9,60 +9,47 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Componentes
 
-### `npm run build`
+Los componentes no ayudan a separar el código y los elementos de la IU en pequeñas piezas reutilizabkes que estaran estaran ailadas las unas con las otras. Dichos componentes en __React__ con definidas como funciones en JS,existes dos tipos. Además dichos componentes pueden recibir datos por medio de los __Props__, los datos se pasan del padre al hijo pero nunca al revés
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Como hemos indicado anteriormente se pueden definir dos tipos de componentes:
+* Functional component (comando rápido: rsc)
+* Class Component (comando rápido: rcc)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Class Component
+Siempre tiene un método obligatorio que es el render, donde se devuelve el método return con el código html.
 
-### `npm run eject`
+### Functional Component
+* Ventajas:
+     
+     * Fáciles de crear y de leer.
+     * Por su sencillez tiene menos código y por lo tanto, más fácil testearlo.
+     * Muy útil para utilizarlo para componentes que no tiene nada de lógica, solo se encargan de renderizar.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* Desventajas (sin hooks):
+    
+    * No se pueden usar los métodos del __Ciclo de vida__.
+    * No tiene __state__.
+    * No pueden usar __refs__.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Métodos del Ciclo de Vida
 
-## Learn More
+* Son métodos o funciones que se ejecutan automáticamente en el Componente. 
+* Solo existen en Class Component
+* Son eventos que ocurren desde que el componente es creado hasta que es destruido.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Los componente más utilizados son:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* componentDidMount. Este evento se lanza cuando el componente ha sido creado.
+* componentWillMount. Este evento se ejecuta cuando el componente aun no ha sido creado.
+* componentDidUpdate. Este método se ejecuta cuando hay alguna modificación en el componente.
+* componentWillUnmount. Al quitar el componente se ejecuta dicho evento.
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
